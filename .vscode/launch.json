@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "C/C++: clang++ build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            //需要调试的程序。如果我们是在 hello.cpp 文件中开启调试，则对应调试的程序是project/target/hello
+            "program": "${workspaceFolder}/target/${fileBasenameNoExtension}",
+            //运行时传递给程序的参数数组
+            "args": [],
+            //为 true 时，程序将在main 方法入口处添加断点
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            //此处的值应当和tasks.json 中的 label 值保持一致
+            "preLaunchTask": "C/C++: clang++ build active file"
+        }
+    ],
+    "version": "2.0.0"
+}
